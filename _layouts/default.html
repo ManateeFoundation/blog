@@ -3,15 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+   <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
     {% include meta.html %}
   <link rel="stylesheet" type="text/css" href="http://manatee.foundation/style.css">
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
   <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 </head>
 <body>
   <nav>
-    <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+    <a href="{{ site.baseurl }}/" class="icon"><img src="{{ site.avatar }}" /></a>
     <div id="menu-icon">
       <span></span>
       <span></span>
@@ -20,7 +19,13 @@
     </div>
   	<ul id="dropdown">
       <li>
-        <a href="{{ site.baseurl }}/">Blog</a>
+      	<a href="#">About</a>
+      </li>
+      <li>
+      	<a href="{{ site.baseurl }}/">Blog</a>
+      </li>
+      <li>
+        <a href="#">Connect</a>
       </li>
       <li>
         <a href="https://twitter.com/Manatee_Fdn" target="_blank">
@@ -29,6 +34,7 @@
       </li>
      </ul>
    </nav>
+  <nav>
     <div id="main" role="main" class="container">
       <p class="site-description">{{ site.description }}</p>
       {{ content }}
